@@ -1,0 +1,475 @@
+[
+  {
+    "name": "1号线",
+    "children": [
+      {
+        "name": "宝安中心",
+        "value": 56202,
+        "children": [
+          {
+            "name": "A口",
+            "value": 20281
+          },
+          {
+            "name": "B口",
+            "value": 22331
+          },
+          {
+            "name": "C口",
+            "value": 23590
+          },
+          {
+            "name": "D口",
+            "value": 25590
+          },
+          {
+            "name": "E口",
+            "value": 22590
+          },
+          {
+            "name": "F口",
+            "value": 20092
+          }
+        ]
+      },
+      {
+        "name": "前海湾",
+        "value": 42013,
+        "children": [
+          {
+            "name": "A口",
+            "value": 20281
+          },
+          {
+            "name": "B1口",
+            "value": 22331
+          },
+          {
+            "name": "B2口",
+            "value": 23590
+          },
+          {
+            "name": "B口",
+            "value": 25590
+          },
+          {
+            "name": "C口",
+            "value": 22590
+          },
+          {
+            "name": "D口",
+            "value": 20092
+          }
+        ]
+      },
+      {
+        "name": "世界之窗",
+        "value": 210282,
+        "children": [
+          {
+            "name": "A口",
+            "value": 20281
+          },
+          {
+            "name": "B口",
+            "value": 22331
+          },
+          {
+            "name": "C1口",
+            "value": 23590
+          },
+          {
+            "name": "H1口",
+            "value": 25590
+          },
+          {
+            "name": "I口",
+            "value": 22590
+          },
+          {
+            "name": "J口",
+            "value": 20092
+          }
+        ]
+      },
+      {
+        "name": "会展中心",
+        "value": 168203,
+        "children": [
+          {
+            "name": "A1口",
+            "value": 20281
+          },
+          {
+            "name": "A2口",
+            "value": 22331
+          },
+          {
+            "name": "B口",
+            "value": 23590
+          },
+          {
+            "name": "C口",
+            "value": 25590
+          },
+          {
+            "name": "D口",
+            "value": 22590
+          },
+          {
+            "name": "E口",
+            "value": 20092
+          },
+          {
+            "name": "F口",
+            "value": 20092
+          }
+        ]
+      },
+      {
+        "name": "购物公园",
+        "value": 40292,
+        "children": [
+          {
+            "name": "A口",
+            "value": 20281
+          },
+          {
+            "name": "B口",
+            "value": 22331
+          },
+          {
+            "name": "C口",
+            "value": 23590
+          },
+          {
+            "name": "D口",
+            "value": 25590
+          },
+          {
+            "name": "E口",
+            "value": 22590
+          },
+          {
+            "name": "F口",
+            "value": 20092
+          },
+          {
+            "name": "G口",
+            "value": 20092
+          }
+        ]
+      },
+      {
+        "name": "岗厦",
+        "value": 40292,
+        "children": [
+          {
+            "name": "A口",
+            "value": 20281
+          },
+          {
+            "name": "B口",
+            "value": 22331
+          },
+          {
+            "name": "C口",
+            "value": 23590
+          }
+        ]
+      },
+      {
+        "name": "老街",
+        "value": 40292,
+        "children": [
+          {
+            "name": "A口",
+            "value": 20281
+          },
+          {
+            "name": "B口",
+            "value": 22331
+          },
+          {
+            "name": "C口",
+            "value": 23590
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "5号线",
+    "children": [
+      {
+        "name": "西丽",
+        "value": 201023,
+        "children": [
+          {
+            "name": "A口",
+            "value": 20281
+          },
+          {
+            "name": "B口",
+            "value": 22331
+          },
+          {
+            "name": "C口",
+            "value": 23590
+          },
+          {
+            "name": "D口",
+            "value": 25590
+          }
+        ]
+      },
+      {
+        "name": "深圳北站",
+        "value": 103735,
+        "children": [
+          {
+            "name": "A口",
+            "value": 20281
+          },
+          {
+            "name": "B口",
+            "value": 22331
+          },
+          {
+            "name": "C口",
+            "value": 23590
+          },
+          {
+            "name": "D口",
+            "value": 25590
+          }
+        ]
+      },
+      {
+        "name": "布吉",
+        "value": 83834,
+        "children": [
+          {
+            "name": "A口",
+            "value": 20281
+          },
+          {
+            "name": "B口",
+            "value": 22331
+          },
+          {
+            "name": "C口",
+            "value": 23590
+          },
+          {
+            "name": "D口",
+            "value": 25590
+          }
+        ]
+      },
+      {
+        "name": "五和",
+        "value": 68384,
+        "children": [
+          {
+            "name": "A口",
+            "value": 20281
+          },
+          {
+            "name": "B口",
+            "value": 22331
+          },
+          {
+            "name": "C口",
+            "value": 23590
+          },
+          {
+            "name": "D口",
+            "value": 25590
+          }
+        ]
+      },
+      {
+        "name": "黄贝岭",
+        "value": 45038,
+        "children": [
+          {
+            "name": "A口",
+            "value": 20281
+          },
+          {
+            "name": "B口",
+            "value": 22331
+          },
+          {
+            "name": "C口",
+            "value": 23590
+          },
+          {
+            "name": "D口",
+            "value": 25590
+          }
+        ]
+      },
+      {
+        "name": "赤湾",
+        "value": 90382,
+        "children": [
+          {
+            "name": "A口",
+            "value": 20281
+          },
+          {
+            "name": "B口",
+            "value": 22331
+          },
+          {
+            "name": "C口",
+            "value": 23590
+          },
+          {
+            "name": "D口",
+            "value": 25590
+          }
+        ]
+      },
+      {
+        "name": "太安",
+        "value": 10201,
+        "children": [
+          {
+            "name": "A口",
+            "value": 20281
+          },
+          {
+            "name": "B口",
+            "value": 22331
+          },
+          {
+            "name": "C口",
+            "value": 23590
+          },
+          {
+            "name": "D口",
+            "value": 25590
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "7号线",
+    "children": [
+      {
+        "name": "华强北",
+        "value": 430291,
+        "children": [
+          {
+            "name": "A口",
+            "value": 20281
+          },
+          {
+            "name": "B口",
+            "value": 22331
+          },
+          {
+            "name": "C口",
+            "value": 23590
+          },
+          {
+            "name": "D口",
+            "value": 25590
+          }
+        ]
+      },
+      {
+        "name": "福民",
+        "value": 80284,
+        "children": [
+          {
+            "name": "A口",
+            "value": 20281
+          },
+          {
+            "name": "B口",
+            "value": 22331
+          },
+          {
+            "name": "C口",
+            "value": 23590
+          },
+          {
+            "name": "D口",
+            "value": 25590
+          }
+        ]
+      },
+      {
+        "name": "八卦岭",
+        "value": 40294,
+        "children": [
+          {
+            "name": "A口",
+            "value": 20281
+          },
+          {
+            "name": "B口",
+            "value": 22331
+          },
+          {
+            "name": "C口",
+            "value": 23590
+          },
+          {
+            "name": "D口",
+            "value": 25590
+          }
+        ]
+      },
+      {
+        "name": "石厦",
+        "value": 50939,
+        "children": [
+          {
+            "name": "A口",
+            "value": 20281
+          },
+          {
+            "name": "B口",
+            "value": 22331
+          },
+          {
+            "name": "C口",
+            "value": 23590
+          },
+          {
+            "name": "D口",
+            "value": 25590
+          }
+        ]
+      },
+      {
+        "name": "安托山",
+        "value": 10921,
+        "children": [
+          {
+            "name": "A口",
+            "value": 20281
+          },
+          {
+            "name": "B口",
+            "value": 22331
+          },
+          {
+            "name": "C口",
+            "value": 23590
+          },
+          {
+            "name": "D口",
+            "value": 25590
+          }
+        ]
+      }
+    ]
+  }
+]

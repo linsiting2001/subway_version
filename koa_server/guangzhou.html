@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="" style="height: 514px" id="guangzhouMap"></div>
+    <script src="lib/echarts.min.js"></script>
+    <script src="lib/jquery.min.js"></script>
+    <script src="json/guangzhou.json"></script>
+    <script>
+      // 广州 地图
+      guangzhouMap();
+      function guangzhouMap() {
+        var dom = document.getElementById("guangzhouMap");
+        //得到echarts的实例对象
+        var myChart = echarts.init(dom);
+        //根据百度地图坐标拾取器来的经纬度
+        var geoCoordMap = {
+          从化区: [113.600774, 23.550805],
+          花都区: [113.228589, 23.411162],
+          海珠区: [113.3172, 23.08331],
+          白云区: [113.27324, 23.15792],
+          天河区: [113.36199, 23.12463],
+          越秀区: [113.2668, 23.12901],
+          荔湾区: [113.24428, 23.12586],
+          黄浦区: [113.27324, 23.15792],
+          番禺区: [113.38424, 22.93772],
+          南沙区: [113.52497, 22.80169],
+          增城区: [113.8109, 23.26093],
+        };
+        //数据信息（黄色点点的大小，鼠标移上去会显示这个数据）
+        var data = [
+          {
+            name: "从化区",
+            value: 199,
+          },
+          {
+            name: "花都区",
+            value: 170,
+          },
+          {
+            name: "海珠区",
+            value: 102,
+          },
+          {
+            name: "白云区",
+            value: 81,
+          },
+          {
+            name: "天河区",
+            value: 147,
+          },
+          {
+            name: "越秀区",
+            value: 130,
+          },
+          {
+            name: "黄浦区",
+            value: 172,
+          },
+          {
+            name: "荔湾区",
+            value: 156,
+          },
+          {
+            name: "南沙区",
+            value: 169,
+          },
+          {
+            name: "增城区",
+            value: 136,
+          },
+        ];
+        //处理数据的函数,将经纬度,名称,value结合到一起放入series中的data中
+        var convertData = function (data) {
+          var res = [];
+          for (var i = 0; i < data.length; i++) {
+            var geoCoord = geoCoordMap[data[i].name];
+            if (geoCoord) {
+              res.push({
+                name: data[i].name,
+                value: geoCoord.concat(data[i].value),
+              });
+            }
+          }
+          return res;
+        };
+
+        //配置样式
+        var optionMap = {
+          // backgroundColor: '#404a59',
+          title: {
+            text: "广州市",
+
+            left: "center",
+            textStyle: {
+              color: "#fff",
+            },
+          },
+          //鼠标移到黄点点上显示数据就是配置的这个
+          tooltip: {
+            trigger: "item",
+            //自定义修改显示
+            formatter: function (data) {
+              return (res = "<div><p>人数：" + data.value[2] + "</p></div>");
+            },
+          },
+
+          geo: {
+            map: "",
+            //中心点(经纬度)
+            //center: [118.27958, 31.117566],
+            //缩放比例
+            zoom: 1.1,
+            label: {
+              emphasis: {
+                show: false,
+              },
+            },
+            //是否允许拖拽
+            roam: true,
+            itemStyle: {
+              normal: {
+                areaColor: "#323c48", //默认区块颜色
+                borderColor: "#03b8c0", //区块描边颜色
+                borderWidth: 2, //区块描边颜色
+              },
+              emphasis: {
+                areaColor: "#45ad00", //鼠标划过区块的颜色
+              },
+            },
+            regions: [
+              //对不同的区块进行着色
+              {
+                name: "从化市", //区块名称
+                itemStyle: {
+                  normal: {
+                    areaColor: "#281fe1",
+                  },
+                },
+              },
+              //     },{
+              //       name: '繁昌区', //区块名称
+              //       itemStyle: {
+              //           normal: {
+              //               areaColor: '#193094'
+              //           }
+              //       }
+              //     },{
+              //       name: '南陵县', //区块名称
+              //       itemStyle: {
+              //           normal: {
+              //               areaColor: '#4210c2'
+              //           }
+              //       }
+              //     },{
+              //       name: '湾沚区', //区块名称
+              //       itemStyle: {
+              //           normal: {
+              //               areaColor: '#295bcc'
+              //           }
+              //       }
+              //     },{
+              //       name: '镜湖区', //区块名称
+              //       itemStyle: {
+              //           normal: {
+              //               areaColor: '#009900'
+              //           }
+              //       }
+              //     },{
+              //       name: '弋江区', //区块名称
+              //       itemStyle: {
+              //           normal: {
+              //               areaColor: '#1f95e1'
+              //           }
+              //       }
+              //     },{
+              //     name: '鸠江区',
+              //     itemStyle: {
+              //         normal: {
+              //             areaColor: '#1042c2'
+              //         }
+              //     }
+              // }
+            ],
+          },
+          series: [
+            {
+              // name: '',
+              type: "effectScatter",
+              coordinateSystem: "geo",
+              data: convertData(data),
+              // symbolSize: function(val) {
+              //     return val[2] / 10;
+              // },//根据数值设定地图上圆点的大小
+              showEffectOn: "render",
+              rippleEffect: {
+                brushType: "stroke",
+              },
+              hoverAnimation: true,
+              label: {
+                normal: {
+                  formatter: "{b}",
+                  position: "right",
+                  show: true,
+                },
+              },
+              itemStyle: {
+                normal: {
+                  color: "#f4e925", //地图上圆点的大小
+                  shadowBlur: 10, //
+                  shadowColor: "red", //圆点光晕的颜色
+                },
+              },
+              zlevel: 1,
+            },
+          ],
+        };
+
+        //wuhu.json 是对应区域的地理信息json文件
+        $.get("json/guangzhou.json", function (myJson) {
+          echarts.registerMap("guangzhou", myJson); //注册
+          optionMap.geo.map = "guangzhou";
+          myChart.setOption(optionMap);
+          // 地图自适应
+          window.onresize = function () {
+            myChart.resize();
+          };
+        });
+      }
+    </script>
+  </body>
+</html>

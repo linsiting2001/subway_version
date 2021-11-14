@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="connect">连接</button>
+    <button id="send" disabled="true">发送数据</button><br />
+    从服务器端发送回来的数据： <br />
+    <span id="recv"></span>
+
+    <script>
+      var connect = document.querySelector("#connect");
+      var send = document.querySelector("#send");
+      var recv = document.querySelector("#recv");
+
+      let ws = null;
+      connect.onclick = function () {
+        //1.创建一个websocket对象
+        ws = new WebSocket("ws://localhost:9998");
+        //2.连接成功事件
+        ws.onopen = () => {
+          console.log("连接服务器端成功...");
+          send.disabled = false;
+        };
+        // 4.接收数据事件
+        ws.onmessage = (msg) => {
+          console.log("接收到从服务器发送过来的数据了");
+          console.log(msg);
+          recv.innerHTML = msg.data;
+        };
+        //3. 关闭连接事件
+        ws.onclose = () => {
+          console.log("连接服务器失败...");
+          send.disabled = true;
+        };
+      };
+      //5. 发送数据
+      send.onclick = function () {
+        ws.send(
+          JSON.stringify({
+            action: "themeChange",
+            socketType: "themeChange",
+            chartName: "",
+            value: "chalk",
+          })
+        );
+      };
+    </script>
+  </body>
+</html>
